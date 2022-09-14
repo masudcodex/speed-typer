@@ -111,7 +111,65 @@
                     The above diagram demonstrates the basic workflow between the Event Loop and the Task Queue.
                   </div>
                 </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  What are the ways to get undefined?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Undefined is also a primitive value in JavaScript. A variable or an object has an undefined value when no value is assigned before using it. So we can say that undefined means lack of value or unknown value. There are several ways that can get us undefined <br>
+
+                    For Example:
+                    <pre>
+                        <code>
+                            var myVar;
+
+                            alert(myVar); // undefined 
+                        </code>
+                    </pre>
+                    In the above example, we have not assigned any value to a variable named 'myVar'. A variable 'myVar' lacks a value. So it is undefined. <br>
+                    You will get undefined value when you call a non-existent property or method of an object. 
+                    <pre>
+                        <code>
+                            function Sum(val1, val2)
+                            {
+                                var result = val1 + val2;
+                            }
+
+                            var result = Sum(5, 5);
+                            alert(result);// undefined 
+                        </code>
+                    </pre>
+                    In the above example, a function Sum does not return any result but still we try to assign its resulted value to a variable. So in this case, result will be undefined. <br>
+
+                    If we pass less arguments in function call then, that parameter will have undefined value.
+                    <pre>
+                        <code>
+                            function Sum(val1, val2)
+                                {
+                                    return val1 + val2;  // val2 is undefined 
+                                }
+
+                                Sum(5);
+                        </code>
+                    </pre>
+                    An undefined evaluates to false when used in conditional expression. <br> <br>
+                    <pre>
+                        <code>
+                            var myVar;
+
+                            if (myVar)
+                                alert("myVar evaluates to true");
+                            else
+                                alert("myVar evaluates to false");
+                        </code>
+                    </pre>
+                </div>
               </div>
+            </div>
         </div>
     </main>
 
