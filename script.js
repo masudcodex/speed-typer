@@ -16,7 +16,7 @@ fetch("./texts.json")
   .then((res) => res.json())
   .then((data) => {
     questionText = data[Math.floor(Math.random() * data.length)];
-    question.innerHTML = questionText;
+    question.innerHTML = `<p class="question-text">${questionText}<p>`;
   });
 
 // checks the user typed character and displays accordingly
