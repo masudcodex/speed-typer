@@ -45,7 +45,59 @@
                 </div>
               </div>
             </div>
-            
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    What are the differences between Global scope and Block scope?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>
+                    <strong>Global Scope:</strong><br>
+                        The variables defined outside of any function or curly brackets are known as global variables and have global scope. Global scope means that the variables can be accessed from any part of that program, any function or conditional state can access that variable.
+
+                        For example
+
+                        <pre>
+                            <code>
+                                var name = "Programming Hero";
+
+                                function printName(){
+                                // the variable can be accessed inside here
+                                console.log("This tutorial is by "+name );
+                                }
+
+                                printName();
+                            </code>
+                        </pre> 
+                  </p>
+                  <p>
+                    <strong>Local Scope:</strong><br>
+                        Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the variables inside the <strong>curly brackets {}</strong>. Now, these curly brackets can be of loops, or conditional statements, or something else. You are only allowed to refer to these variables from within the <strong>curly brackets {}</strong>.
+
+                        For example: <br>
+                        A block of code enclosed with curly brackets{} containing some block variables inside a function. Now when we try to access the variables from inside the function but outside of that specific block. Then we’ll get a reference error, even though they are local variables of the same function.
+
+                        <pre>
+                            <code>
+                                function addition() {
+
+                                    {
+                                      let a = 10;
+                                      const b = 5;
+                                    }
+                                    console.log(a + b);
+                                  }
+                                addition();
+                            </code>
+                        </pre>
+                        <br>
+                        The keywords let and const are used to define block variables.
+                  </p>
+                </div>
+              </div>
+            </div>
         </div>
     </main>
 
